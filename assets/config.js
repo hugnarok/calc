@@ -4,10 +4,12 @@ function CriaCalculadora() {
 
     this.inicia = () =>{
         this.clickBotao();
+        this.capturaEnter();
     }
 
     this.capturaEnter = () => {
         document.addEventListener('keypress', (e) => {
+            console.log(e);
             if(e.key === 'Enter'){
                 this.realizaConta();
             }
